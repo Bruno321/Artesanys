@@ -2,8 +2,8 @@ import React from "react"
 import { Menu } from "../../screens/menu"
 import { Inicio } from "../../screens/inicio"
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import {Dimensions} from 'react-native';
 const Drawer = createDrawerNavigator();
+import {Dimensions} from 'react-native';
 const screenWidth = Dimensions.get("screen").width;
 export const DrawerNavigator = () => {
     return (
@@ -15,10 +15,11 @@ export const DrawerNavigator = () => {
                  width: screenWidth,
                },
                drawerLabelStyle:{
-                width: screenWidth / 2,
-                marginLeft:70,
+                marginLeft:screenWidth/8,
                 fontSize:40,
-              }
+              },
+            //   drawerActiveBackgroundColor:"white",
+              drawerActiveTintColor:"black",
              }}
          >
             <Drawer.Screen name="Inicio" component={Inicio} options={{title:"Inicio"}} />
