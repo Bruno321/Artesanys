@@ -14,12 +14,8 @@ export const DrawerNavigator = () => {
                 drawerStyle: {
                  width: screenWidth,
                },
-               drawerLabelStyle:{
-                marginLeft:screenWidth/8,
-                fontSize:40,
-              },
-            //   drawerActiveBackgroundColor:"white",
-              drawerActiveTintColor:"black",
+              //drawerActiveBackgroundColor:"white",
+              // drawerActiveTintColor:"black",
              }}
          >
             <Drawer.Screen name="Inicio" component={Inicio} options={{title:"Inicio"}} />
