@@ -1,16 +1,42 @@
 import React from 'react';
-import { View,Text,StyleSheet } from 'react-native';
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { View,Text,StyleSheet,TouchableOpacity,ImageBackground,Dimensions } from 'react-native';
+import { ListaHorizontal } from '../../components/ListaHorizontal';
+import LinearGradient from 'react-native-linear-gradient';
 
-library.add(faXmark);
+const screenHeight = Dimensions.get("screen").height;
+const screenWidth = Dimensions.get("screen").width;
 
 export const  Inicio  = ()=>{
     
     return (
-        <View >
-            <Text>Hola</Text>
+        <View style={styles.container}>
+            <View style={styles.topContainer}>
+                    <ImageBackground  
+                    style={styles.imageCont}  
+                    imageStyle={styles.imageBackgroundStyle} 
+                    source={require('../../assets/ofertasBackground.jpg')}>
+                        <LinearGradient
+                                colors={['#00000000', '#000000']} 
+                                style={styles.overlay}
+                                start={{x: 1, y: 0}} end={{x: 0, y: 0}}
+                                >
+                                    <View style={{display:"flex",flexDirection:"row"}}>
+                                        <View style={styles.titleCont}>
+                                            <Text style={{fontSize:20,color:"white"}}>!Mira nuestra sección de ofertas!</Text>
+                                        </View>
+                                        <View style={styles.buttonContainer}>
+                                            <TouchableOpacity style={styles.button}>
+                                                <Text style={{fontSize:15,color:"black",textAlign:"center"}}>Ir ahora</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                    </View>
+                        </LinearGradient>
+                    </ImageBackground>
+            </View>
+            <View style={styles.bottomContainer}>
+                <ListaHorizontal title={"Atículos destacados"} request={0}/>
+                <ListaHorizontal title={"Atículos recientes"} request={1}/>
+            </View>
         </View>
     )
 }
@@ -18,31 +44,54 @@ export const  Inicio  = ()=>{
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        display:"flex",
-        flexDirection:"row"
+        paddingRight:20,
+        paddingLeft:20,
+        paddingEnd:20,
+        paddingStart:20,
+        paddingTop:15
     },
-    text:{
-        fontSize:60,
-        borderBottomColor:"black",
-        borderBottomWidth:1,
-        borderStyle:"solid"
-    },
-    crossContainer:{
+    topContainer:{
         flex:1,
-        padding:5,
     },
-    contentContainer:{
-        flex:9,
-        paddingRight:40,
+    bottomContainer:{
+        flex:3,
     },
-    textContainer:{
-      marginTop:100 ,
-    },
-    iconsContainer:{
-        marginTop:250,
+    imageCont:{
         display:"flex",
         flexDirection:"row",
-        justifyContent:"space-between",
-        width:200
-    }
+        height:screenHeight/5
+    },
+    titleCont:{
+        flex:1,
+        height:screenHeight/5,
+        display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
+        padding:10,
+    },
+    buttonContainer:{
+        flex:1,
+        height:screenHeight/5,
+        display:"flex",
+        justifyContent:"flex-end",
+        alignItems:"flex-end",
+
+    },
+    button:{
+        backgroundColor:"white",
+        borderRadius:10,
+        width:screenWidth/5,
+        height:screenHeight/30,
+        marginBottom:20,
+        marginRight:20,
+        justifyContent:"center"
+    },
+    imageBackgroundStyle:{
+        borderRadius:30,
+    },
+    overlay: {
+        borderTopLeftRadius:30,
+        borderBottomLeftRadius:30,
+        width :351
+      },
 })

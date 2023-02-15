@@ -2,6 +2,7 @@ import React from "react"
 import { Menu } from "../../screens/menu"
 import { Inicio } from "../../screens/inicio"
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { Header } from "../../components/Header";
 const Drawer = createDrawerNavigator();
 import {Dimensions} from 'react-native';
 const screenWidth = Dimensions.get("screen").width;
@@ -14,9 +15,14 @@ export const DrawerNavigator = () => {
                 drawerStyle: {
                  width: screenWidth,
                },
+               header: ({ navigation, route, options }) => {
+              
+                return <Header navigation={navigation}/>
+              }
               //drawerActiveBackgroundColor:"white",
               // drawerActiveTintColor:"black",
              }}
+             
          >
             <Drawer.Screen name="Inicio" component={Inicio} options={{title:"Inicio"}} />
             <Drawer.Screen name="Categorias" component={Inicio} options={{title:"Categorías"}} />

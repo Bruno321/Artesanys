@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         display:"flex",
-        flexDirection:"row"
+        flexDirection:"row",
+        backgroundColor:"#D3D3D3"
     },
     text:{
         fontSize:60,
