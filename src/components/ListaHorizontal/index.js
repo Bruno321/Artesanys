@@ -72,10 +72,19 @@ export const ListaHorizontal = ({title,request}) => {
                 data={data}
                 horizontal={true}
                 keyExtractor={data => data.id.toString()}
+                numColumns={1}
                 renderItem={(data)=>{
                     return (
                         <ArticulosDestacadosCard data={data}/>
                     )
+                }}
+                ItemSeparatorComponent={() => {
+                    return (
+                        <View
+                            style={{
+                                width: 10,
+                            }} />
+                    );
                 }}
             />
         </View>
@@ -85,6 +94,5 @@ export const ListaHorizontal = ({title,request}) => {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        padding:10
     }
 })
