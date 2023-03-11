@@ -12,10 +12,10 @@ export const  Inicio  = ()=>{
         <View style={styles.container}>
             <View style={styles.topContainer}>
                     <ImageBackground  
-                    style={styles.imageCont}  
-                    imageStyle={styles.imageBackgroundStyle} 
-                    source={require('../../assets/ofertasBackground.jpg')}>
-                        <LinearGradient
+                        style={styles.imageCont}  
+                        imageStyle={styles.imageBackgroundStyle} 
+                        source={require('../../assets/ofertasBackground.jpg')}>
+                            <LinearGradient
                                 colors={['#00000000', '#000000']} 
                                 style={styles.overlay}
                                 start={{x: 1, y: 0}} end={{x: 0, y: 0}}
@@ -34,6 +34,7 @@ export const  Inicio  = ()=>{
                     </ImageBackground>
             </View>
             <View style={styles.bottomContainer}>
+                {/* Cambiar lo de request y mandarle la data nosotros */}
                 <ListaHorizontal title={"Atículos destacados"} request={0}/>
                 <ListaHorizontal title={"Atículos recientes"} request={1}/>
             </View>

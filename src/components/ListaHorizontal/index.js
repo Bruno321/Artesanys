@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {View,Text,Image,StyleSheet,FlatList} from 'react-native'
-import { ArticulosDestacadosCard } from "../Cards/ArituclosDestacadosCard";
+import { ArticulosDestacadosCard } from "../Cards/ArticulosDestacadosCard";
 
 
 
@@ -79,12 +79,7 @@ export const ListaHorizontal = ({title,request}) => {
                     )
                 }}
                 ItemSeparatorComponent={() => {
-                    return (
-                        <View
-                            style={{
-                                width: 10,
-                            }} />
-                    );
+                    return (<View style={{width: 10,}} />);
                 }}
             />
         </View>

@@ -1,6 +1,7 @@
 import React from "react"
 import { Menu } from "../../screens/menu"
 import { Inicio } from "../../screens/inicio"
+import { Categoria } from "../../screens/categoria";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Header } from "../../components/Header";
 const Drawer = createDrawerNavigator();
@@ -25,7 +26,7 @@ export const DrawerNavigator = () => {
              
          >
             <Drawer.Screen name="Inicio" component={Inicio} options={{title:"Inicio"}} />
-            <Drawer.Screen name="Categorias" component={Inicio} options={{title:"Categorías"}} />
+            <Drawer.Screen name="Categorias" component={Categoria} options={{title:"Categorías"}} />
             <Drawer.Screen name="Perfil" component={Inicio} options={{title:"Perfil"}} />
             <Drawer.Screen name="Carrito" component={Inicio} options={{title:"Carrito"}} />
         </Drawer.Navigator>
