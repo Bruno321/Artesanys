@@ -10,9 +10,8 @@ export default function App() {
     return (
       <NavigationContainer>
             <Stack.Navigator initialRouteName='drawer' screenOptions={{headerShown:false}}>
-              {/* TODO logia de login */}
+              {/* TODO logica de login */}
               <Stack.Screen name="drawer" component={DrawerNavigator} />
-                
             </Stack.Navigator>
       </NavigationContainer>
     );

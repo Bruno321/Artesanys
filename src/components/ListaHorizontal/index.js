@@ -2,12 +2,8 @@ import React, {useEffect, useState} from "react";
 import {View,Text,Image,StyleSheet,FlatList} from 'react-native'
 import { ArticulosDestacadosCard } from "../Cards/ArticulosDestacadosCard";
 
-
-
-
 export const ListaHorizontal = ({title,request}) => {
     const [data,setData] = useState()
-
 
     useEffect(()=>{
         if(request===0){
@@ -18,6 +14,7 @@ export const ListaHorizontal = ({title,request}) => {
                     stars: 5, 
                     calification: 33,
                     id:0,
+                    image:require("../../assets/llavero.jpg")
                 },
                 {
                     title:"Llavero floral grabado personalizado",
@@ -25,6 +22,7 @@ export const ListaHorizontal = ({title,request}) => {
                     stars: 2, 
                     calification: 10,
                     id:1,
+                    image:require("../../assets/joya.jpg")
                 },
                 {
                     title:"Pendientes chapados en oro con flores",
@@ -32,6 +30,7 @@ export const ListaHorizontal = ({title,request}) => {
                     stars: 5, 
                     calification: 33,
                     id:2,
+                    image:require("../../assets/pendiente.jpg")
                 },
                 
             ])
@@ -43,6 +42,7 @@ export const ListaHorizontal = ({title,request}) => {
                     stars: 5, 
                     calification: 33,
                     id:0,
+                    image:require("../../assets/vasija.jpg")
                 },
                 {
                     title:"Llavero floral grabado personalizado",
@@ -50,6 +50,7 @@ export const ListaHorizontal = ({title,request}) => {
                     stars: 2, 
                     calification: 10,
                     id:1,
+                    image:require("../../assets/vasija2.jpg")
                 },
                 {
                     title:"Pendientes chapados en oro con flores",
@@ -57,6 +58,7 @@ export const ListaHorizontal = ({title,request}) => {
                     stars: 5, 
                     calification: 33,
                     id:2,
+                    image:require("../../assets/pintura.jpg")
                 },
                 
             ])

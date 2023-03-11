@@ -17,7 +17,7 @@ export const ArticulosDestacadosCard = ({data}) => {
     return (
         <View style={styles.container}>
             <View style={styles.topContainer}>
-                <Image style={{width:160,resizeMode:"cover",height:160}} source={require("../../../assets/llavero.jpg")}/>
+                <Image style={{width:160,resizeMode:"cover",height:160}} source={data.item.image}/>
             </View>
             <View style={styles.midContainer}>
                 <Text style={{fontSize:15,color:"black"}} numberOfLines={2} >{data.item.title}</Text>
