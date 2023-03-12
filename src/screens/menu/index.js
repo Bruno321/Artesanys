@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         marginLeft:10,
         height:3,
         backgroundColor:"black",
-        marginTop:-10
+        marginTop:-5
     },
     titulo:{
         fontSize:50,
