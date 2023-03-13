@@ -11,6 +11,7 @@ const Drawer = createDrawerNavigator();
 import {Dimensions} from 'react-native';
 import { Categoria } from "../../screens/categoria";
 import { Carrito } from "../../screens/carrito";
+import { Perfil } from "../../screens/perfil";
 const screenWidth = Dimensions.get("screen").width;
 
 export const DrawerNavigator = () => {
@@ -33,7 +34,7 @@ export const DrawerNavigator = () => {
          >
             <Drawer.Screen name="Inicio" component={Inicio} options={{title:"Inicio"}} />
             <Drawer.Screen name="Categorias" component={Categorias} options={{title:"Categorías"}} />
-            <Drawer.Screen name="Perfil" component={Inicio} options={{title:"Perfil"}} />
+            <Drawer.Screen name="Perfil" component={Perfil} options={{title:"Perfil"}} />
             <Drawer.Screen name="Carrito" component={Carrito} options={{title:"Carrito"}} />
             <Drawer.Screen name="Categoria" component={Categoria} options={{title:"Categoría"}} />
         </Drawer.Navigator>

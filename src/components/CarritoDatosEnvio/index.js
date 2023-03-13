@@ -3,7 +3,7 @@ import {View,Text,StyleSheet,TouchableOpacity,Image} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 
 
-export const CarritoDatosEnvio = ( ) => {
+export const CarritoDatosEnvio = ({setScreenToRender} ) => {
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Datos de contacto</Text>
@@ -19,7 +19,7 @@ export const CarritoDatosEnvio = ( ) => {
                 <TextInput style={styles.textInput} placeholder='Código postal *'/>
             </View>
             <Text style={{marginTop:15,textAlign:"left",width:350}}>*Estos campos son obligatorios</Text>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={()=>setScreenToRender(2)}>
                 <Text style={{fontSize:20,color:"white"}}>Continuar</Text>
             </TouchableOpacity>
         </View>

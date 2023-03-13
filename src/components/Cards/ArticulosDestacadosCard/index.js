@@ -42,7 +42,7 @@ export const ArticulosDestacadosCard = ({data}) => {
 
 const styles = StyleSheet.create({
     container:{
-        width:170,
+        width:190,
         alignItems:"center",
         alignContent:"center",
         justifyContent:"center"

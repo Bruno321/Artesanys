@@ -29,7 +29,7 @@ export const CarritoPago = ( ) => {
                 </View>
                 <Text style={{flex:2}}>Pago  por PayPal</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=>setScreenToRender(1)}>
+            <TouchableOpacity style={styles.button} >
                 <Text style={{fontSize:20,color:"white"}}>Pagar</Text>
             </TouchableOpacity>
         </View>
